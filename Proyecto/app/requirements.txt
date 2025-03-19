@@ -1,0 +1,4 @@
+flask
+Wand
+requests
+python-dotenv

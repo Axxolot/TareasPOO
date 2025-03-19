@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima</title>
+</head>
+<body>
+    <h1>Consulta del Clima</h1>
+
+    <form action="/clima" method="get">
+        <label for="ciudad">Ingresa el nombre de la ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad">
+        <button type="submit">Consultar</button>
+    </form>
+
+    {% if weather %}
+        <h2>Clima en {{ weather.ciudad }}</h2>
+        <p>Temperatura: {{ weather.temperatura }} °C</p>
+        <p>Descripción: {{ weather.description }}</p>
+
+        <!-- Mostrar el icono usando la URL de la ruta /dibuja_clima -->
+        <p><img src="{{ url_for('dc', icon_code=weather.icono) }}" alt="Ícono del clima"></p>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
+
+
