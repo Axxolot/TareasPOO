@@ -26,8 +26,3 @@ class Clima:
             'icono': weather_data['weather'][0]['icon'],
             'description': weather_data['weather'][0]['description']
         }
-
-c=Clima()
-
-print(c.extrae_relevantes('Toluca'))
-
