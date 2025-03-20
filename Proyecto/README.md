@@ -12,3 +12,4 @@ Por seguridad aunque es posible subir mi api key github recomienda no hacerlo
 
 El resultado deberia de mostrarse al momento de acceder al http://localhost:8000 y se veria de las siguiente manera
 
+![image](https://github.com/user-attachments/assets/3346ccea-0c8e-41d8-8048-cd35e349b1ff)
